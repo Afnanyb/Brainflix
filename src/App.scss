@@ -1,0 +1,17 @@
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/typography" as *;
+
+.logo__img {
+  display: flex;
+}
+
+.avatar__img {
+  height: 2rem;
+  width: 1rem;
+}
+
+.upload__btn {
+  width: 4rem;
+  height: 3rem;
+}
