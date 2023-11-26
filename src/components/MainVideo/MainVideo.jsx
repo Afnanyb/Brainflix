@@ -5,7 +5,10 @@ function MainVideo({ video }) {
   return (
     <>
       <section className="video--details">
-        <video poster={video.image} alt={video.image} />
+        <div className="video--details__image">
+          <video poster={video.image} alt={video.image} />
+          <div className="video--details__play"></div>
+        </div>
         <div>
           <h6>{video.duration} </h6>
         </div>
