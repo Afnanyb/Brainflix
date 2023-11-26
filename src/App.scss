@@ -2,16 +2,26 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/typography" as *;
 
-.logo__img {
+* {
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+h1,
+h2,
+h3,
+p,
+form {
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: "Avenir";
+
+  height: 100vh;
   display: flex;
-}
-
-.avatar__img {
-  height: 2rem;
-  width: 1rem;
-}
-
-.upload__btn {
-  width: 4rem;
-  height: 3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }

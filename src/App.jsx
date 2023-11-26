@@ -1,14 +1,24 @@
+// import { useState } from "react";
 import "./App.scss";
-import Logo from "./assets/Logo/BrainFlix-logo.svg";
-import Icon from "./assets/Icons/upload.svg";
+import Header from "./components/Header/Header";
+// import videos from "./Data/video-details.json";
+// import MainVideo from "./components/MainVideo/MainVideo";
+// import CommentForm from "./components/CommentForm/CommentForm";
+// import VideoList from "./components/VideoList/VideoList";
 
 function App() {
+  // const [index, setIndex] = useState(0);
+  // const selectedVideo = videos[index];
+
+  // console.log(selectedVideo);
   return (
     <>
-      <img src={Logo} className="logo__img" />
-      <input type="text" placeholder="search" />
-      <img src={Images} className="avatar__img" />
-      <button src={Icon} className="upload__btn" />
+      <Header />
+      {/* <MainVideo video={selectedVideo} /> */}
+
+      {/* <CommentForm /> */}
+      {/* <CommentList /> */}
+      {/* <VideoList setSelectedVideo={setIndex} /> */}
     </>
   );
 }
