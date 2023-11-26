@@ -9,12 +9,13 @@ function Header() {
       <header className="header__container">
         <img src={Logo} className="header__logo" />
         <div className="header__search-container">
-          <input
-            type="text"
-            placeholder="search"
-            className="header__search-bar"
-          />
-
+          <div className="header__search-box">
+            <input
+              type="text"
+              placeholder="search"
+              className="header__search-bar"
+            />
+          </div>
           <img src={Image} className="header__avatar" />
         </div>
         <button className="header__upload-button">

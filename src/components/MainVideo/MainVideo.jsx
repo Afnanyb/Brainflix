@@ -1,19 +1,37 @@
-// import "./MainVideo.scss";
+import "./MainVideo.scss";
 
-// function MainVideo({ video }) {
-//   return (
-//     <>
-//       <section className="video__details">
-//         <h1>{video.title} </h1>
-//         <h3>{video.likes} </h3>
-//         <h3>By {video.channel} </h3>
-//         <video poster={video.image} alt={video.image} />
-//         <h3>{video.views} </h3>
-//         <h3>{video.timestampe} </h3>
-//         <h3>{video.duration} </h3>
-//       </section>
-//     </>
-//   );
-// }
+function MainVideo({ video }) {
+  const dateFormat = new Date(video.timestamp).toLocaleDateString("en-US");
+  return (
+    <>
+      <section className="video--details">
+        <video poster={video.image} alt={video.image} />
+        <div>
+          <h6>{video.duration} </h6>
+        </div>
+        <h1 className="video--details__title">{video.title} </h1>
+        <div className="video--details__container">
+          <div className="video-details__left">
+            <h3 className="video--details__channel--bold">
+              By {video.channel}{" "}
+            </h3>
+            <p className="video--details__timestamp">{dateFormat} </p>
+          </div>
+          <div className="video-details__right">
+            <p className="video--details__views">
+              <div className="video--details__views--icon"> </div>
+              {video.views}
+            </p>
+            <p className="video--details__likes">
+              <div className="video--details__likes--icon"> </div>
+              {video.likes}
+            </p>
+          </div>
+        </div>
+        <p className="video--details__description">{video.description} </p>
+      </section>
+    </>
+  );
+}
 
-// export default MainVideo;
+export default MainVideo;

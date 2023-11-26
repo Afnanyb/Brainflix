@@ -2,6 +2,10 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+// * {
+//   border: 1px solid red;
+// }
+
 .header__container {
   display: flex;
   flex-direction: column;
@@ -25,12 +29,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: 1rem 0 0 0;
-    &__logo {
-      @include tablet {
-        width: 6rem;
-        height: 2rem;
-      }
+
+    @include tablet {
+      width: 6rem;
+      height: 2rem;
     }
+
     &__search-container {
       display: flex;
       flex-direction: row;
@@ -42,6 +46,11 @@
       flex-direction: row;
       justify-content: center;
       flex-wrap: nowrap;
+    }
+
+    &__search-box {
+      display: flex;
+      background-color: aqua;
     }
   }
 
@@ -87,7 +96,7 @@
     background: none;
     background-color: $blue;
     color: $white;
-    width: 20rem;
+    width: 100%;
     height: 2.6rem;
     position: relative;
     border-radius: 0.3233rem;
@@ -101,5 +110,12 @@
       height: 3.3rem;
       width: 13rem;
     }
+  }
+
+  .header__upload-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 7%;
   }
 }
