@@ -2,6 +2,12 @@
 @use "../../styles/partials/variables" as *;
 
 .video--details {
+  @include tablet {
+    height: 33rem;
+  }
+  @include desktop {
+    height: 33rem;
+  }
   &__play {
     content: url("../../assets/Icons/play.svg");
     display: block;
@@ -33,6 +39,8 @@
 
   &__left {
     margin-left: 0 0 0 1rem;
+    display: flex;
+    flex-direction: row;
   }
 
   &__channel {

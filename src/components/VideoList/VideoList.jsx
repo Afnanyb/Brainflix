@@ -15,8 +15,10 @@ function VideoList({ setSelectedVideo }) {
               className="next-video__thumbnail"
               poster={video.image}
             ></video>
-            <div className="details__title"> {video.title}</div>
-            <div className="details__channel"> {video.channel}</div>
+            <div className="next-video__details">
+              <h3 className="next-video__title"> {video.title}</h3>
+              <p className="next-video__channel"> {video.channel}</p>
+            </div>
           </section>
         );
       })}
