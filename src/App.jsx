@@ -3,7 +3,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import videos from "./Data/video-details.json";
 import MainVideo from "./components/MainVideo/MainVideo";
-// import CommentForm from "./components/CommentForm/CommentForm";
+import CommentForm from "./components/CommentForm/CommentForm";
 import VideoList from "./components/VideoList/VideoList";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <MainVideo video={selectedVideo} />
 
-      {/* <CommentForm /> */}
+      <CommentForm />
       {/* <CommentList /> */}
       <VideoList setSelectedVideo={setIndex} />
     </>
