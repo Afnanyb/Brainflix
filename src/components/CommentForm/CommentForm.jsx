@@ -4,12 +4,12 @@ import Icon from "../../assets/Icons/add_comment.svg";
 
 function CommentForm() {
   return (
-    // <div className="comment-counter"> {commentsData.length} 3Comments</div>
     <div className="comment-form">
       <div className="comment-form__container">
         <div className="comment-form__img">
           <img className="comment-form__avatar " src={Image} />
         </div>
+
         <form method="get" className="comment-form__section">
           <label htmlFor="comment" className="comment-form__label">
             JOIN THE CONVERSATION

@@ -6,22 +6,22 @@ import Image from "../../assets/Images/Mohan-muruge.jpg";
 function Header() {
   return (
     <>
-      <header className="header__container">
-        <img src={Logo} className="header__logo" />
-        <div className="header__search-container">
-          <div className="header__search-box">
-            <input
-              type="text"
-              placeholder="search"
-              className="header__search-bar"
-            />
-          </div>
-          <div>
-            <img src={Image} className="header__avatar" />
-          </div>
-          <button className="header__upload-button">
+      <header className="header">
+        <div className="header__logo">
+          <img src={Logo} alt="Website logo" className="header__logo--img" />
+        </div>
+        <form className="header__search">
+          <input
+            type="search"
+            placeholder="Search"
+            className="header__search--box"
+          ></input>
+          <img src={Image} alt="Avatar" className="header__avatar" />
+        </form>
+        <div className="header__upload">
+          <button className="header__button button">
             <img src={Icon} />
-            <span className="button-title"> UPLOAD</span>
+            UPLOAD
           </button>
         </div>
       </header>

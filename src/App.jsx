@@ -18,7 +18,6 @@ function App() {
     <>
       <Header />
       <MainVideo video={selectedVideo} />
-
       <CommentForm />
       <CommentList comments={selectedVideo.comments} />
       <VideoList setSelectedVideo={setId} selectedVideo={selectedVideo} />
