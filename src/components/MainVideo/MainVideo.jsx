@@ -1,4 +1,8 @@
 import "./MainVideo.scss";
+import Play from "../../assets/Icons/play.svg";
+import Scrub from "../../assets/Icons/scrub.svg";
+import FullScreen from "../../assets/Icons/fullscreen.svg";
+import Volume_up from "../../assets/Icons/volume_up.svg";
 
 function MainVideo({ video }) {
   const dateFormat = new Date(video.timestamp).toLocaleDateString("en-US");
@@ -9,8 +13,12 @@ function MainVideo({ video }) {
           <video poster={video.image} alt={video.image} />
           <div className="video--details__play"></div>
         </div>
-        <div>
-          <h6>{video.duration} </h6>
+        <div className="video__cont">
+          <p>{video.duration}</p>
+          <img src={Play} />
+          <img src={Scrub} />
+          <img src={FullScreen} />
+          <img src={Volume_up} />
         </div>
         <h1 className="video--details__title">{video.title} </h1>
         <div className="video--details__container">

@@ -16,12 +16,14 @@ function Header() {
               className="header__search-bar"
             />
           </div>
-          <img src={Image} className="header__avatar" />
+          <div>
+            <img src={Image} className="header__avatar" />
+          </div>
+          <button className="header__upload-button">
+            <img src={Icon} />
+            <span className="button-title"> UPLOAD</span>
+          </button>
         </div>
-        <button className="header__upload-button">
-          <img src={Icon} />
-          <span className="button-title"> UPLOAD</span>
-        </button>
       </header>
     </>
   );
