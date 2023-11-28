@@ -123,8 +123,7 @@
     padding: 0;
     margin: 0;
     order: 2;
-    //working on moving the avatar to the far right for tablet
-    //and desktop, but not working right now
+
     @include tablet {
       order: 3;
     }

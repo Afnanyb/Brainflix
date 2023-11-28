@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import videos from "./Data/video-details.json";
@@ -6,6 +5,7 @@ import MainVideo from "./components/MainVideo/MainVideo";
 import CommentForm from "./components/CommentForm/CommentForm";
 import CommentList from "./components/CommentList/CommentList";
 import VideoList from "./components/VideoList/VideoList";
+import { useState } from "react";
 
 function App() {
   const firstVideo = videos[0];
