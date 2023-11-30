@@ -1,7 +1,7 @@
 import "./MainVideo.scss";
 
 function MainVideo({ video }) {
-  const dateFormat = new Date(video.timestamp).toLocaleDateString("en-US");
+  // const dateFormat = new Date(video.timestamp).toLocaleDateString("en-US");
   return (
     <>
       <section className="video--details">

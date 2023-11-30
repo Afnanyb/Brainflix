@@ -1,6 +1,5 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography" as *;
 
 .comment-form {
   display: flex;
@@ -52,7 +51,6 @@
     border-radius: 0.2rem;
     border: 1px solid $silver;
     background-color: $alabaster;
-    font-family: "Avenir";
 
     @include tablet {
       height: 3.5rem;

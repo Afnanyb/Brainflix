@@ -1,7 +1,5 @@
-//
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography" as *;
 
 * {
   box-sizing: border-box;
@@ -10,11 +8,9 @@
 body {
   margin: 0;
 }
-
-img {
-  vertical-align: bottom;
+.img {
+  position: absolute;
 }
-
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -37,8 +33,8 @@ img {
   }
 
   &__logo {
-    max-height: 64px;
-    max-width: 128px;
+    max-height: 6rem;
+    max-width: 22rem;
   }
 
   &__avatar {

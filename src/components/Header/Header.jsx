@@ -16,7 +16,7 @@ function Header() {
 
         <button className="header__button">
           <img src={Icon} />
-          Upload
+          UPLOAD
         </button>
 
         <img className="header__avatar" src={Image} />
