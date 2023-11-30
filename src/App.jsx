@@ -6,6 +6,7 @@ import CommentForm from "./components/CommentForm/CommentForm";
 import CommentList from "./components/CommentList/CommentList";
 import VideoList from "./components/VideoList/VideoList";
 import { useState } from "react";
+import VideoDetails from "./components/VideoDetails/VideoDetails";
 
 function App() {
   const firstVideo = videos[0];
@@ -18,6 +19,7 @@ function App() {
     <>
       <Header />
       <MainVideo video={selectedVideo} />
+      <VideoDetails />
       <CommentForm />
       <CommentList comments={selectedVideo.comments} />
       <VideoList setSelectedVideo={setId} selectedVideo={selectedVideo} />
