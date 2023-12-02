@@ -4,7 +4,9 @@ import Icon from "../../assets/Icons/add_comment.svg";
 
 function CommentForm() {
   return (
+    // <div className="comment-counter">comments</div>
     <div className="comment-form">
+      <p className="comment-form__comment--count"> 3 Comments </p>
       <div className="comment-form__container">
         <div className="comment-form__img">
           <img className="comment-form__avatar " src={Image} />

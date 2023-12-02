@@ -6,7 +6,11 @@ function MainVideo({ video }) {
     <>
       <section className="video--details">
         <div className="video--details__image">
-          <video poster={video.image} alt={video.image} />
+          <video
+            src={video.video + "?api_key=73dfb1cb-ef46-46ea-bdd9-5df6aeb591db"}
+            alt={video.image}
+            controls
+          />
           <div className="video--details__play"></div>
         </div>
       </section>
