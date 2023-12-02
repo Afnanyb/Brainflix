@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.page--layout {
+  @include desktop {
+    display: flex;
+  }
+}
+
+.active__video {
+  @include desktop {
+    flex: 70%;
+    border-right: 2px solid $mercury;
+    padding-top: 2.25rem;
+  }
+}
