@@ -8,9 +8,6 @@
   align-items: flex-start;
 
   width: 95%;
-  @include tablet {
-    margin-top: 20rem;
-  }
 
   &__comment--count {
     font-weight: bold;

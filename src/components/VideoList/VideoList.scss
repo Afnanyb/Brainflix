@@ -29,7 +29,7 @@
     border-radius: 0.25rem;
     margin: 0;
     @include tablet {
-      width: 10rem;
+      width: 15rem;
     }
     @include desktop {
       width: 10rem;
@@ -37,7 +37,8 @@
   }
   &__details {
     width: 50%;
-    align-items: flex-end;
+    // align-items: flex-end;
+    margin-bottom: 1rem;
     margin-left: 1rem;
   }
   &__title {

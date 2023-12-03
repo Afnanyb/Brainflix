@@ -43,7 +43,6 @@ function MainVideoPage() {
     getVideoById();
   }, [videoId]);
 
-  // const selectedVideo = videos.find((video) => video.id === id);
   if (!activeVideo) return "loading";
   console.log(activeVideo);
 
@@ -56,11 +55,7 @@ function MainVideoPage() {
           <CommentForm />
           <CommentList selectedVideo={activeVideo} />
         </div>
-        <VideoList
-          // setSelectedVideo={setId}
-          selectedVideo={activeVideo}
-          videos={videos}
-        />
+        <VideoList videoId={videoId} videos={videos} />
       </div>
     </>
   );
