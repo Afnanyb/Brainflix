@@ -27,17 +27,18 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 1rem;
   }
 
   &__name {
-    font-weight: 500;
+    font-weight: bold;
   }
   &__date {
-    color: $mercury;
+    color: $silver;
   }
 
   &__img {
-    width: 8rem;
+    min-width: 2.5rem;
     height: 2.5rem;
     object-fit: cover;
     border-radius: 50%;

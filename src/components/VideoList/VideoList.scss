@@ -19,8 +19,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 1rem 0 1rem 1rem;
-  width: 100%;
+  margin: 1rem 0 1.6rem 1rem;
+  width: 90%;
   &__thumbnail {
     background-color: $mercury;
     width: 6rem;
@@ -29,22 +29,23 @@
     border-radius: 0.25rem;
     margin: 0;
     @include tablet {
-      width: 15rem;
+      width: 9rem;
+      height: 5rem;
     }
     @include desktop {
-      width: 10rem;
+      width: 8rem;
+
+      margin-bottom: auto;
     }
   }
   &__details {
     width: 50%;
-    // align-items: flex-end;
+    align-items: flex-end;
     margin-bottom: 1rem;
     margin-left: 1rem;
   }
   &__title {
     font-weight: 600;
     font-size: 16px;
-  }
-  &__channel {
   }
 }

@@ -1,12 +1,12 @@
-import "./MainVideoPage.scss";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "./MainVideoPage.scss";
 import MainVideo from "../../components/MainVideo/MainVideo";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentList from "../../components/CommentList/CommentList";
 import VideoList from "../../components/VideoList/VideoList";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
-import { useParams } from "react-router-dom";
 
 function MainVideoPage() {
   const [activeVideo, setActiveVideo] = useState(null);
@@ -44,8 +44,6 @@ function MainVideoPage() {
   }, [videoId]);
 
   if (!activeVideo) return "loading";
-  console.log(activeVideo);
-
   return (
     <>
       <MainVideo video={activeVideo} />

@@ -4,7 +4,6 @@ import Icon from "../../assets/Icons/add_comment.svg";
 
 function CommentForm() {
   return (
-    // <div className="comment-counter">comments</div>
     <div className="comment-form">
       <p className="comment-form__comment--count"> 3 Comments </p>
       <div className="comment-form__container">
@@ -23,7 +22,7 @@ function CommentForm() {
               className="comment-form__text"
               id="comment"
               required=""
-            ></textarea>
+            />
             <button className="comment-form__button">
               <img src={Icon} />
               COMMENT{" "}

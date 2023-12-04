@@ -53,7 +53,6 @@
     background-color: $alabaster;
     border-radius: 0.2rem;
     border: 1px solid $silver;
-    background-color: $alabaster;
 
     @include tablet {
       height: 3.5rem;
@@ -86,7 +85,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    border-bottom: 1px solid $silver;
+    border-bottom: 2px solid $mercury;
   }
   &__section {
     display: flex;
@@ -98,8 +97,7 @@
     margin: 8px 0;
     box-sizing: border-box;
     @include tablet {
-      margin: 0 0 0 1.5rem;
-      height: 10rem;
+      margin: 0 0 1rem 1.5rem;
     }
   }
 }
@@ -115,11 +113,11 @@
 .comment-form__button {
   position: relative;
   background-color: $blue;
-  color: white;
+  color: $white;
   height: 2.5rem;
   width: 100%;
   margin: 1rem 0 0 0;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   border: none;
 
   font-size: 1rem;
