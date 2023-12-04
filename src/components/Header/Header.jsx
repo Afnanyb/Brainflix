@@ -1,7 +1,7 @@
-import "./Header.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo/BrainFlix-logo.svg";
 import Image from "../../assets/Images/Mohan-muruge.jpg";
+import "./Header.scss";
 
 function Header() {
   const navigate = useNavigate();

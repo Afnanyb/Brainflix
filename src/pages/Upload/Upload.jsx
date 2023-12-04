@@ -9,7 +9,7 @@ function Upload() {
         <h1 className="upload-title">Upload Video</h1>
         <div className="upload-page-container">
           <div className="thumbnail-container">
-            <p className=" thumbnail-title"> VIDEO THUMBNAIL</p>
+            <p className=" thumbnail-title">VIDEO THUMBNAIL</p>
             <img
               src={uploadVideo}
               alt="thumbnail"
