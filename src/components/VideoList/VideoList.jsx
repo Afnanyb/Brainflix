@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./VideoList.scss";
 
-function VideoList({ videoId, videos }) {
+function VideoList({ videoId, videos = [] }) {
   const navigate = useNavigate();
 
   return (

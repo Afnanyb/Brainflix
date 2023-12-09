@@ -21,9 +21,7 @@ function MainVideoPage() {
 
   useEffect(() => {
     async function getVideos() {
-      const response = await axios.get(
-        "https://project-2-api.herokuapp.com/videos?api_key=73dfb1cb-ef46-46ea-bdd9-5df6aeb591db"
-      );
+      const response = await axios.get("http://localhost:8080/videos");
 
       setVideos(response.data);
     }
@@ -33,9 +31,7 @@ function MainVideoPage() {
   useEffect(() => {
     async function getVideoById() {
       const response = await axios.get(
-        "https://project-2-api.herokuapp.com/videos/" +
-          videoId +
-          "?api_key=73dfb1cb-ef46-46ea-bdd9-5df6aeb591db"
+        `http://localhost:8080/videos/${videoId}`
       );
 
       setActiveVideo(response.data);
