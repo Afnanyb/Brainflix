@@ -1,8 +1,28 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { baseUrl } from "../../config";
 import "./Upload.scss";
-
 import uploadVideo from "../../assets/Images/Upload-video-preview.jpg";
 
 function Upload() {
+  const [videoTitle, setVideoTitle] = useState("");
+  const [videoDescription, setVideoDescription] = useState("");
+  const navigate = useNavigate();
+
+  async function postVideo() {
+    try {
+      const response = await axios.post(`${baseUrl}/videos`, {
+        videoTitle,
+        videoDescription,
+      });
+
+      navigate(`/${response.data.id}`);
+    } catch (error) {
+      // handle error
+    }
+  }
+
   return (
     <>
       <div className="upload__body">
@@ -26,8 +46,10 @@ function Upload() {
                 type="text"
                 id="title"
                 name="title"
+                value={videoTitle}
+                onChange={(event) => setVideoTitle(event.target.value)}
                 placeholder="Add a title to your video"
-              ></input>
+              />
             </div>
             <div className="upload-form__description-container">
               <label
@@ -41,13 +63,18 @@ function Upload() {
                 type="text"
                 id="description"
                 name="description"
+                value={videoDescription}
+                onChange={(event) => setVideoDescription(event.target.value)}
                 placeholder="Add a description to your video"
-              ></textarea>
+              />
             </div>
           </div>
         </div>
+
         <div className="button-container">
-          <button className="publish__button">PUBLISH</button>
+          <button onClick={postVideo} className="publish__button">
+            PUBLISH
+          </button>
 
           <button className="cancel-button">CANCEL</button>
         </div>
