@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { baseUrl } from "../../config";
 import "./MainVideoPage.scss";
 import MainVideo from "../../components/MainVideo/MainVideo";
 import CommentForm from "../../components/CommentForm/CommentForm";
@@ -21,20 +22,26 @@ function MainVideoPage() {
 
   useEffect(() => {
     async function getVideos() {
-      const response = await axios.get("http://localhost:8080/videos");
+      try {
+        const response = await axios.get(`${baseUrl}/videos`);
 
-      setVideos(response.data);
+        setVideos(response.data);
+      } catch (error) {
+        //  handle error
+      }
     }
     getVideos();
   }, []);
 
   useEffect(() => {
     async function getVideoById() {
-      const response = await axios.get(
-        `http://localhost:8080/videos/${videoId}`
-      );
+      try {
+        const response = await axios.get(`${baseUrl}/videos/${videoId}`);
 
-      setActiveVideo(response.data);
+        setActiveVideo(response.data);
+      } catch (error) {
+        // handle error
+      }
     }
     getVideoById();
   }, [videoId]);

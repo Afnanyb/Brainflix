@@ -1,19 +1,26 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
-
+import { baseUrl } from "../../config";
 import "./Upload.scss";
-
 import uploadVideo from "../../assets/Images/Upload-video-preview.jpg";
 
 function Upload() {
   const [videoTitle, setVideoTitle] = useState("");
   const [videoDescription, setVideoDescription] = useState("");
+  const navigate = useNavigate();
 
   async function postVideo() {
-    const response = await axios.post("http://localhost:8080/videos", {
-      videoTitle,
-      videoDescription,
-    });
+    try {
+      const response = await axios.post(`${baseUrl}/videos`, {
+        videoTitle,
+        videoDescription,
+      });
+
+      navigate(`/${response.data.id}`);
+    } catch (error) {
+      // handle error
+    }
   }
 
   return (
@@ -42,7 +49,7 @@ function Upload() {
                 value={videoTitle}
                 onChange={(event) => setVideoTitle(event.target.value)}
                 placeholder="Add a title to your video"
-              ></input>
+              />
             </div>
             <div className="upload-form__description-container">
               <label
@@ -59,10 +66,11 @@ function Upload() {
                 value={videoDescription}
                 onChange={(event) => setVideoDescription(event.target.value)}
                 placeholder="Add a description to your video"
-              ></textarea>
+              />
             </div>
           </div>
         </div>
+
         <div className="button-container">
           <button onClick={postVideo} className="publish__button">
             PUBLISH

@@ -6,15 +6,13 @@ import Upload from "./pages/Upload/Upload";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/:videoId?" element={<MainVideoPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/:videoId?" element={<MainVideoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
